@@ -1,0 +1,13 @@
+apiVersion: kustomize.toolkit.fluxcd.io/v1
+kind: Kustomization
+metadata:
+  name: my-namespace
+  namespace: flux-system
+spec:
+  interval: 1m
+  path: ./namespaces/my-namespace
+  prune: true
+  sourceRef:
+    kind: GitRepository
+    name: my-flux-repo
+  targetNamespace: my-namespace

@@ -14,3 +14,4 @@ spec:
   targetNamespace: my-namespace
   dependsOn:
     - name: my-namespace
+      namespace: flux-system

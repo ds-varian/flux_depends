@@ -2,7 +2,7 @@ apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
 metadata:
   name: my-app
-  namespace: flux-system
+  namespace: my-namespace
 spec:
   interval: 1m
   path: ./apps/my-app
@@ -12,4 +12,4 @@ spec:
     name: flux-system
   targetNamespace: my-namespace
   dependsOn:
-    - name: my-namespace
+    - name: my-namespace2
